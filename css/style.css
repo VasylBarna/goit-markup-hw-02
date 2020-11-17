@@ -69,20 +69,23 @@ hex     00 00 00
   --title-text-color: #757575;
   --white-button-color: #ffffff;
   --accent-button-color: #2196f3;
-  --primary-white-color: #e5e5e5;
+  --primary-white-color: #ffffff;
   --secondary-white-color: #f5f4fa;
   --black-bgc: #2f303a;
-  --contacts-list-color: #ffffff99;
+  --contacts-list-color: rgba(255, 255, 255, 0.6);
 }
 
 .full-document {
   color: var(--title-text-color);
-  background-color: var(--primary-white-color);
-  font-family: Roboto;
+  font-family: -Roboto, sans-serif;
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  background-color: var(--primary-white-color);
+  text-decoration: none;
 }
+
 /* * {
   padding: 0;
   margin: 0%;
@@ -106,36 +109,51 @@ button {
 }
 
 /* Site-nav */
-.site-nav a :hover,
-.site-nav a:focus,
-.auth-nav a:hover,
-.auth-nav a:focus {
+.logo {
   color: var(--accent-button-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-text {
+  color: var(--primary-text-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.link {
+  color: var(--primary-text-color);
 }
 .site-nav.list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-button-color);
+}
+.link.current {
+  color: var(--accent-button-color);
 }
 .auth-nav.list {
+  font-family: -Roboto, sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--title-text-color);
 }
-
-.logo {
+.auth-nav .link:hover,
+.auth-nav .link:focus {
   color: var(--accent-button-color);
-  font-family: Raleway;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
 }
 
-.logo-text {
-  color: var(--primary-text-color);
-}
 /* Header */
 .page-header {
   background-color: var(--white-button-color);
@@ -161,12 +179,6 @@ button {
   line-height: 1.14;
   text-transform: uppercase;
 }
-/* Текст абзаців - основний (стилі шрифтів пішли у body) */
-/* .text-feature {
-  font-family: Roboto;
-  font-size: 14px;
-  line-height: 1.71;
-} */
 
 /* Sample */
 .sample-title {
@@ -202,11 +214,16 @@ button {
 .footers {
   background-color: var(--black-bgc);
 }
-.contacts-list .malito .tel {
-  font-size: 14px;
-  line-height: 1.71;
+.link-footer {
   color: var(--contacts-list-color);
 }
+.contacts-list {
+  font-family: -Roboto, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
 .address {
   color: var(--white-button-color);
 }
@@ -258,4 +275,11 @@ button {
   font-size: 16px;
   line-height: 1.63px;
   text-align: center;
+  color: var(--primary-text-color);
+  background-color: var(--secondary-white-color);
+}
+.filters :hover,
+.filters :focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-button-color);
 }
